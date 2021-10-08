@@ -1,0 +1,155 @@
+* {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#body {
+  display: flex;
+  flex-direction: row;
+}
+
+#leftPanel {
+  width: 300px;
+  background-color: #ffe8e8;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  height: 92.5vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+#imgSK {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+#leftPanel > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+icons-connect > * {
+  margin: 3px;
+}
+
+icons-techStack > * {
+  margin: 3px;
+}
+
+icons-connect > .fab:hover {
+  color: black;
+}
+
+#rightPanel {
+  width: 75vw;
+}
+
+projects {
+  display: flex;
+  flex-direction: column;
+}
+
+#proj-desc {
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ffe8e8;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: #faf5f5;
+}
+
+.project > p {
+  padding: 10px;
+}
+
+.proj-images {
+  height: 300px;
+  width: min-content;
+}
+
+@media screen and (max-width: 375px) {
+  #body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #leftPanel {
+    width: 100%;
+    height: auto;
+    background-color: #ffe8e8;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    grid-template-areas: "img myName" "img desg" "connect icons-connect" "techStack icons-techStack";
+  }
+
+  #leftPanel > img {
+    grid-area: img;
+  }
+
+  #leftPanel > myName {
+    grid-area: myName;
+  }
+
+  #leftPanel > desg {
+    grid-area: desg;
+  }
+
+  #leftPanel > connect {
+    grid-area: connect;
+  }
+
+  #leftPanel > icons-connect {
+    grid-area: icons-connect;
+  }
+
+  #leftPanel > techStack {
+    grid-area: techStack;
+  }
+
+  #leftPanel > icons-techStack {
+    grid-area: icons-techStack;
+  }
+
+  #imgSK {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  #leftPanel > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  icons-connect {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: #faf5f5;
+  }
+}

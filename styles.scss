@@ -1,0 +1,178 @@
+
+//TODO - move variables to a _abstracts file
+$light-color: #ffe8e8;
+$pale-color: #faf5f5;
+$border-color:rgba(0, 0, 0, 0.5);
+$text-color: rgba(0, 0, 0, 0.65);
+
+*{
+  color: $text-color;
+  // font-family:
+}
+#body{
+  display: flex;
+  flex-direction: row;
+  // height: 100%;
+}
+#leftPanel{
+  width: 300px;
+  background-color:$light-color;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid $border-color;
+  height: 92.5vh;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  justify-items: center;
+
+
+  // display: flex;
+  // flex-direction: column;
+  // //height: 100vh;
+  // width: 300px;
+  // background-color:$light-color;
+  // // justify-items: center;
+  // justify-content: flex-start;
+  // align-items: center;
+  // padding: 10px;
+  // margin-top: 10px;
+  // border: 2px solid $border-color;
+  // // position: fixed;
+  // overflow-y:auto;
+}
+
+#imgSK{
+  width:80%;
+  height:auto;
+  border-radius: 50%;
+  object-fit:contain;
+}
+#leftPanel>*{
+  display: flex;
+  flex-direction: row;
+  // justify-items: center;
+  align-items: center;
+}
+
+
+//TODO - move all icons to _icon file in components folder. Restructure in BEM format.
+
+icons-connect>*{
+  margin: 3px;  
+}
+icons-techStack>*{
+  margin: 3px;  
+}
+icons-connect>.fab:hover{
+  color: black;
+}
+// .fas:hover{
+//   color: black;
+// }
+
+
+//right panel
+#rightPanel{
+  width: 75vw;
+  // margin-left: 330px;
+}
+
+
+
+projects{
+  display: flex;
+  flex-direction: column;
+  
+}
+#proj-desc{
+  margin:10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color:$light-color;
+  border: 2px solid $border-color;
+}
+
+.project{
+  display :flex;
+  flex-direction: row;
+  margin: 10px;
+  border: 2px solid $border-color;
+  background-color: $pale-color;
+  // width:80%;
+}
+.project >p {
+  padding: 10px;
+}
+.proj-images{
+  height: 300px;
+  width:min-content;
+}
+
+// video{
+//   height:400px;
+//   width:auto;
+//   margin: 10px;
+
+// }
+
+
+
+@media screen and (max-width: 375px){
+  #body{
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+  }
+  #leftPanel{
+    width: 100%;
+    height: auto;
+    background-color:$light-color;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid $border-color;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr ; 
+    justify-items: center;
+    grid-template-areas:
+    "img myName"
+    "img desg"
+    "connect icons-connect"
+    "techStack icons-techStack"
+  }
+  #leftPanel>img{grid-area: img;}
+  #leftPanel>myName{grid-area:myName;}
+  #leftPanel>desg{grid-area:desg;}
+  #leftPanel>connect{grid-area:connect;}
+  #leftPanel>icons-connect{grid-area:icons-connect;}
+  #leftPanel>techStack{grid-area:techStack;}
+  #leftPanel>icons-techStack{grid-area:icons-techStack;}
+  
+  #imgSK{
+    width:80%;
+    height:auto;
+    border-radius: 50%;
+    object-fit:contain;
+  }
+  #leftPanel>*{
+    display: flex;
+    flex-direction: column;
+    // justify-items: center;
+    align-items: center;
+  }
+  icons-connect{
+    display: flex;
+    flex-direction: row;
+  }
+  .project{
+    display :flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 2px solid $border-color;
+    background-color: $pale-color;
+    // width:80%;
+  } 
+
+}
