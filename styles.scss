@@ -48,9 +48,9 @@ $text-color: rgba(0, 0, 0, 0.65);
   border-radius: 50%;
   object-fit:contain;
 }
-#leftPanel>*{
+#leftPanel {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   // justify-items: center;
   align-items: center;
 }
@@ -67,9 +67,9 @@ icons-techStack>*{
 icons-connect>.fab:hover{
   color: black;
 }
-// .fas:hover{
-//   color: black;
-// }
+icons-connect>.fas:hover{
+  color: black;
+}
 
 
 //right panel
@@ -106,36 +106,38 @@ projects{
 }
 .proj-images{
   height: 300px;
-  width:min-content;
+  width:280px;
 }
 
 // video{
 //   height:400px;
 //   width:auto;
 //   margin: 10px;
-
+  
 // }
 
 
 
-@media screen and (max-width: 375px){
+@media only screen and (max-width: 500px){ //mobile view
+  //TODO - intermediate sizes
   #body{
     display: flex;
     flex-direction: column;
     // height: 100%;
   }
   #leftPanel{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 300px;
     background-color:$light-color;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px;
+
     border: 2px solid $border-color;
 
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr ; 
-    justify-items: center;
+    justify-items: left;
     grid-template-areas:
     "img myName"
     "img desg"
@@ -156,23 +158,31 @@ projects{
     border-radius: 50%;
     object-fit:contain;
   }
-  #leftPanel>*{
-    display: flex;
-    flex-direction: column;
-    // justify-items: center;
-    align-items: center;
-  }
+  // #leftPanel{
+  //   display: flex;
+  //   flex-direction: column;
+  //   // justify-items: center;
+  //   align-items: center;
+  // }
   icons-connect{
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
+  #rightPanel{
+    width: 99%;
+    // margin-left: 330px;
+  }
+
   .project{
     display :flex;
     flex-direction: column;
+    align-items: center;
     margin: 10px;
     border: 2px solid $border-color;
     background-color: $pale-color;
     // width:80%;
   } 
+  
 
 }

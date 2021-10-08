@@ -27,9 +27,9 @@
   object-fit: contain;
 }
 
-#leftPanel > * {
+#leftPanel {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -42,6 +42,10 @@ icons-techStack > * {
 }
 
 icons-connect > .fab:hover {
+  color: black;
+}
+
+icons-connect > .fas:hover {
   color: black;
 }
 
@@ -76,26 +80,26 @@ projects {
 
 .proj-images {
   height: 300px;
-  width: min-content;
+  width: 280px;
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
   #body {
     display: flex;
     flex-direction: column;
   }
 
   #leftPanel {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 300px;
     background-color: #ffe8e8;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    justify-items: center;
+    justify-items: left;
     grid-template-areas: "img myName" "img desg" "connect icons-connect" "techStack icons-techStack";
   }
 
@@ -134,20 +138,20 @@ projects {
     object-fit: contain;
   }
 
-  #leftPanel > * {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   icons-connect {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+  }
+
+  #rightPanel {
+    width: 99%;
   }
 
   .project {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 10px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     background-color: #faf5f5;
